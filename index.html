@@ -39,17 +39,18 @@
         <h2>Contáctanos</h2>
 
         <form id="formulario">
-            <input type="text" id="nombre" placeholder="Nombre">
-            <input type="text" id="celular" placeholder="Celular">
-            <input type="email" id="email" placeholder="Email">
-            <input type="text" id="pais" placeholder="País">
-            <input type="text" id="ciudad" placeholder="Ciudad">
-            <textarea id="consulta" placeholder="Escribe tu consulta"></textarea>
 
+            <input type="text" id="nombre" placeholder="Nombre" required>
+            <input type="text" id="celular" placeholder="Celular" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="text" id="pais" placeholder="País" required>
+            <input type="text" id="ciudad" placeholder="Ciudad" required>
+            <textarea id="consulta" placeholder="Escribe tu consulta" required></textarea>
             <button type="submit">Enviar</button>
-        </form>
 
+        </form>
         <p id="mensaje"></p>
+        
     </section>
 
     <script src="scripts.js"></script>
