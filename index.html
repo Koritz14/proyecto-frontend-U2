@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Turismo Extremo Sur</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="#quienes">¿Quiénes somos?</a></li>
+            <li><a href="#servicios">Nuestros servicios</a></li>
+            <li><a href="#contacto">Contáctanos</a></li>
+        </ul>
+    </nav>
+
+    <section id="quienes">
+        <h2>¿Quiénes somos?</h2>
+
+        <div class="integrantes">
+            <div class="persona">
+                <img src="img/persona1.jpg" alt="Integrante">
+                <p>Nombre Apellido</p>
+                <p>Carrera / Rol</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="servicios">
+        <h2>Nuestros Servicios</h2>
+
+        <div id="contenedor-servicios">
+            <!-- esto se llena con JS -->
+        </div>
+    </section>
+
+    <section id="contacto">
+        <h2>Contáctanos</h2>
+
+        <form id="formulario">
+            <input type="text" id="nombre" placeholder="Nombre">
+            <input type="text" id="celular" placeholder="Celular">
+            <input type="email" id="email" placeholder="Email">
+            <input type="text" id="pais" placeholder="País">
+            <input type="text" id="ciudad" placeholder="Ciudad">
+            <textarea id="consulta" placeholder="Escribe tu consulta"></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+
+        <p id="mensaje"></p>
+    </section>
+
+    <script src="scripts.js"></script>
+
+</body>
+</html>
