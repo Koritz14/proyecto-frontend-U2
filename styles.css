@@ -1,0 +1,86 @@
+body{
+    color: #4F4F4F;
+    font-family: sans-serif;
+}
+
+header h1, header p {
+    margin: 0;
+    padding: 10px 0;
+    color: #333333;
+    font-family: 'Playfair';
+}
+
+h2{
+    font-family: 'Playfair';
+    font-size: 28px;
+    text-align: center;
+    color: #333333;
+}
+
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    background-color: #003B5C;
+}
+
+nav li {
+    font-family: calibri;
+    color: white;
+    padding: 15px;
+}
+
+nav ul li {
+    padding: 15px 20px;
+}
+
+a:link{
+    color: white;
+    text-decoration: none
+}
+
+a:visited{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+a:hover{
+    color : #D4A373;
+    text-decoration: none
+}
+
+button{
+    background-color: #D4A373;
+    color: white;
+    font-family: sans-serif;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+/* Contenedor principal de todos los integrantes */
+.integrantes {
+    display: flex;
+    justify-content: center; /* Centra el grupo de personas */
+    gap: 100px;              /* Espacio entre cada persona */
+    flex-wrap: wrap;        /* Si no caben, se bajan automáticamente */
+    padding: 20px;
+}
+
+/* Caja individual de cada persona */
+.persona {
+    text-align: center;     /* Centra el texto debajo de la foto */
+    max-width: 200px;       /* Controla que el bloque no sea muy ancho */
+}
+
+/* Control de las imágenes gigantes */
+.persona img {
+    width: 150px;           /* Tamaño fijo para que no sean gigantes */
+    height: 150px;          /* Altura fija */
+    object-fit: cover;      /* Recorta la imagen para que no se deforme */
+    border-radius: 50%;     /* Opcional: las hace circulares */
+    border: 3px solid #003B5C; /* Usando el azul de tu paleta */
+    margin-bottom: 10px;
+}
