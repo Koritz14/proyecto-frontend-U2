@@ -30,7 +30,7 @@ function mostrarServicios() {
         contenedor.innerHTML += `
             <div class="servicio">
                 <h3>${servicio.nombre}</h3>
-                <img src="${servicio.imagen}" width="200">
+                <img class="img-servicio" src="${servicio.imagen}" width="200">
                 <p>${servicio.descripcion}</p>
                 <p><strong>Precio: $${servicio.precio}</strong></p>
             </div>

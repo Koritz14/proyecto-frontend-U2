@@ -84,3 +84,12 @@ button{
     border: 3px solid #003B5C; /* Usando el azul de tu paleta */
     margin-bottom: 10px;
 }
+
+.img-servicio {
+    display: block;      
+    margin: 0 auto;      
+}
+
+.servicio {
+    text-align: center;   /* <--- centra texto e imagen */
+}
