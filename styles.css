@@ -85,13 +85,43 @@ button{
     margin-bottom: 10px;
 }
 
-.img-servicio {
-    display: block;      
-    margin: 0 auto;      
+/* 1. Contenedor padre para que las polaroids no salgan una encima de otra */
+#contenedor-servicios {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+    padding: 20px;
 }
 
-.servicio {
-    text-align: center;   /* <--- centra texto e imagen */
+/* 2. La estructura de la Polaroid */
+.polaroid {
+    width: 80%; /* Ancho fijo para que parezca una foto real */
+    background-color: white;
+    /* Sombra: crea el efecto de profundidad */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-bottom: 25px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+/* 3. La imagen dentro del marco */
+.polaroid img {
+    /* El padding crea el borde blanco interno */
+    padding: 15px 15px 0 15px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.polaroid:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.3);
+}
+
+/* 4. El área de texto debajo de la foto */
+.container-polaroid {
+    text-align: center;
+    padding: 10px 20px;
 }
 
 #mensaje {
