@@ -61,7 +61,9 @@ function validarFormulario() {
     }
 
     // VALIDACIÓN 2: email válido
-    if (!email.includes("@") || !email.includes(".")) {
+    const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // <--- Agregado
+
+    if (!regexEmail.test(email)) { // <--- Modificado
         mensaje.textContent = "El email no es válido";
         mensaje.classList.add("error"); 
         return;
@@ -99,7 +101,7 @@ function validarFormulario() {
     `;
 
     // ABRIR CLIENTE DE CORREO
-    window.location.href = `mailto:mauro.gonzalez12@inacapmail.cl?subject=${encodeURIComponent(asunto)}&body=${encodeURIComponent(cuerpo)}`;
+    window.open(`mailto:mauro.gonzalez12@inacapmail.cl?subject=${encodeURIComponent(asunto)}&body=${encodeURIComponent(cuerpo)}`);
 
     // LIMPIAR FORMULARIO
     limpiarFormulario(); // <--- asegúrate de tener esta función
@@ -111,3 +113,6 @@ document.getElementById("formulario").addEventListener("submit", function(e) {
     validarFormulario();
 });
 
+function limpiarFormulario() {
+    document.getElementById("formulario").reset(); // <--- Agregado
+}
