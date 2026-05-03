@@ -26,17 +26,35 @@ function mostrarServicios() {
 
     contenedor.innerHTML = "";
 
-    servicios.forEach(servicio => {
-        contenedor.innerHTML += `
-            <div class="polaroid">
-                <h3>${servicio.nombre}</h3>
-                <img class="img-servicio" src="${servicio.imagen}" width="200">
-                <p>${servicio.descripcion}</p>
-                <p><strong>Precio: $${servicio.precio}</strong></p>
-            </div>
-        `;
-    });
-}
+        servicios.forEach(servicio => {
+
+            const card = document.createElement("div"); 
+            card.classList.add("polaroid"); 
+
+            const titulo = document.createElement("h3"); 
+            titulo.textContent = servicio.nombre;
+
+            const imagen = document.createElement("img"); 
+            imagen.src = servicio.imagen;
+            imagen.classList.add("img-servicio");
+
+            const descripcion = document.createElement("p"); 
+            descripcion.textContent = servicio.descripcion;
+
+            const precio = document.createElement("p"); 
+            precio.innerHTML = `<strong>Precio: $${servicio.precio}</strong>`;
+
+            // Agregar elementos a la tarjeta
+            card.appendChild(titulo); 
+            card.appendChild(imagen);
+            card.appendChild(descripcion);
+            card.appendChild(precio);
+
+            // Agregar tarjeta al contenedor
+            contenedor.appendChild(card); 
+
+        });
+    }
 
 mostrarServicios();
 
@@ -61,9 +79,9 @@ function validarFormulario() {
     }
 
     // VALIDACIÓN 2: email válido
-    const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // <--- Agregado
+    const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; 
 
-    if (!regexEmail.test(email)) { // <--- Modificado
+    if (!regexEmail.test(email)) { 
         mensaje.textContent = "El email no es válido";
         mensaje.classList.add("error"); 
         return;
@@ -104,15 +122,15 @@ function validarFormulario() {
     window.open(`mailto:mauro.gonzalez12@inacapmail.cl?subject=${encodeURIComponent(asunto)}&body=${encodeURIComponent(cuerpo)}`);
 
     // LIMPIAR FORMULARIO
-    limpiarFormulario(); // <--- asegúrate de tener esta función
+    limpiarFormulario(); 
     }
 
 document.getElementById("formulario").addEventListener("submit", function(e) {
-    e.preventDefault(); //  evita que la página se recargue
+    e.preventDefault(); 
 
     validarFormulario();
 });
 
 function limpiarFormulario() {
-    document.getElementById("formulario").reset(); // <--- Agregado
+    document.getElementById("formulario").reset(); 
 }
