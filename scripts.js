@@ -83,8 +83,27 @@ function validarFormulario() {
 
     // SI TODO ESTÁ BIEN
     mensaje.textContent = "Formulario enviado correctamente";
-    mensaje.classList.add("exito"); 
-}
+    mensaje.classList.add("exito");
+
+    // ARMAR EL CONTENIDO DEL CORREO
+    const asunto = "Consulta Turismo Extremo Sur";
+    const cuerpo = `
+    Nombre: ${nombre}
+    Celular: ${celular}
+    Email: ${email}
+    País: ${pais}
+    Ciudad: ${ciudad}
+
+    Consulta:
+    ${consulta}
+    `;
+
+    // ABRIR CLIENTE DE CORREO
+    window.location.href = `mailto:mauro.gonzalez12@inacapmail.cl?subject=${encodeURIComponent(asunto)}&body=${encodeURIComponent(cuerpo)}`;
+
+    // LIMPIAR FORMULARIO
+    limpiarFormulario(); // <--- asegúrate de tener esta función
+    }
 
 document.getElementById("formulario").addEventListener("submit", function(e) {
     e.preventDefault(); //  evita que la página se recargue
