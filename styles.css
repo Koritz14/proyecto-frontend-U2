@@ -96,7 +96,7 @@ button{
 
 /* 2. La estructura de la Polaroid */
 .polaroid {
-    width: 80%; /* Ancho fijo para que parezca una foto real */
+    width: 50%; /* Ancho fijo para que parezca una foto real */
     background-color: white;
     /* Sombra: crea el efecto de profundidad */
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -110,7 +110,7 @@ button{
     /* El padding crea el borde blanco interno */
     padding: 15px 15px 0 15px;
     box-sizing: border-box;
-    width: 100%;
+    width: 70%;
 }
 
 .polaroid:hover{
