@@ -28,7 +28,7 @@ function mostrarServicios() {
 
     servicios.forEach(servicio => {
         contenedor.innerHTML += `
-            <div class="servicio">
+            <div class="polaroid">
                 <h3>${servicio.nombre}</h3>
                 <img class="img-servicio" src="${servicio.imagen}" width="200">
                 <p>${servicio.descripcion}</p>
