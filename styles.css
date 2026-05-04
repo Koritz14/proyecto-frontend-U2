@@ -182,19 +182,9 @@ button{
 }
 
 
-#nombre   { grid-area: nombre; }
-#celular  { grid-area: celular; }
-#email    { grid-area: email; }
-#pais     { grid-area: pais; }
-#ciudad   { grid-area: ciudad; }
 
-
-#consulta { 
-    grid-area: consulta;
-    height: 15px;
-}
 
 button { 
-    grid-area: enviar; 
-    width: 100%;
+    width: 206%;
+
 }
