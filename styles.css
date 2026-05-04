@@ -155,3 +155,46 @@ button{
     border: 2px solid #003B5C;
     border-radius: 8px;
 }
+
+
+#formulario input, 
+#formulario textarea {
+    background-color: #dbeaff; 
+    border: 1.5px solid #003B5C; 
+    border-radius: 4px;
+    padding: 10px;
+    color: #333;
+    outline: none;
+}
+
+#formulario {
+    display: grid;
+    grid-template-columns: 1fr 1fr;  
+    grid-template-areas: 
+        "nombre pais"
+        "celular ciudad"
+        "email consulta"
+        "enviar enviar";
+    gap: 15px;
+    max-width: 600px;
+    margin: 0 auto;
+    align-items: start; 
+}
+
+
+#nombre   { grid-area: nombre; }
+#celular  { grid-area: celular; }
+#email    { grid-area: email; }
+#pais     { grid-area: pais; }
+#ciudad   { grid-area: ciudad; }
+
+
+#consulta { 
+    grid-area: consulta;
+    height: 15px;
+}
+
+button { 
+    grid-area: enviar; 
+    width: 100%;
+}
